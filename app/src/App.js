@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+
+import MoviesList from './components/MoviesList'
+
 import {connect} from "react-redux";
 
 import asyncFetch from './actions/fetchMoviesAction';
@@ -8,7 +11,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        React
+        <h1>The movie</h1>
+
+          <MoviesList />
       </div>
     );
   }
@@ -19,7 +24,7 @@ class App extends Component {
 }
 
 export default connect(
-    state => state,
+    null,
     dispatch => ({
         fetchMovies(){
             dispatch(asyncFetch());
