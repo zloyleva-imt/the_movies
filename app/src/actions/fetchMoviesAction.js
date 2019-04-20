@@ -3,6 +3,6 @@ export default () => {
         setTimeout(()=>{
             const res = ["Film 1"];
             dispatch({type:"FETCH_MOVIES", payload:res});
-        }, 2000);
+        }, 5000);
     }
 };
