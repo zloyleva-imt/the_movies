@@ -19,6 +19,16 @@ class App extends Component {
 export default connect(
     state => state,
     dispatch => ({
-        fetchMovies(){dispatch({type:"FETCH_MOVIES", payload:["Film 1"]})}
+        fetchMovies(){
+            const asyncFetch = () => {
+                return dispatch => {
+                    setTimeout(()=>{
+                        const res = ["Film 1"];
+                        dispatch({type:"FETCH_MOVIES", payload:res});
+                    }, 2000);
+                }
+            };
+            dispatch(asyncFetch());
+        }
     })
 )(App);
