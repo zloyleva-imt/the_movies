@@ -5,19 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import {Provider} from 'react-redux';
-import {applyMiddleware, createStore} from "redux";
+import { ConnectedRouter } from 'connected-react-router'
+import configureStore, {history} from './configureStore';
 
-import thunk from 'redux-thunk';
-import {composeWithDevTools} from "redux-devtools-extension";
-
-import reducer from './reducers';
-
-const store = createStore(reducer,
-    composeWithDevTools(applyMiddleware(thunk)));
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <ConnectedRouter history={history}>
+            <App />
+        </ConnectedRouter>
     </Provider>,
     document.getElementById('root'));
 
