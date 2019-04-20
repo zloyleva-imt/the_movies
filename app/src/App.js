@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {connect} from "react-redux";
 
+import asyncFetch from './actions/fetchMoviesAction';
+
 class App extends Component {
   render() {
     return (
@@ -20,14 +22,6 @@ export default connect(
     state => state,
     dispatch => ({
         fetchMovies(){
-            const asyncFetch = () => {
-                return dispatch => {
-                    setTimeout(()=>{
-                        const res = ["Film 1"];
-                        dispatch({type:"FETCH_MOVIES", payload:res});
-                    }, 2000);
-                }
-            };
             dispatch(asyncFetch());
         }
     })
