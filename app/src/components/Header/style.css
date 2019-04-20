@@ -1,0 +1,8 @@
+.Header_Component{
+    background-color: #081c24;
+}
+
+.Header_Component .navbar-brand{
+    color: #57d277;
+    font-weight: bold;
+}

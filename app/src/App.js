@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import MoviesList from './components/MoviesList'
+import Header from './components/Header'
 
 import {Link,withRouter} from "react-router-dom";
 import {connect} from "react-redux";
@@ -11,6 +12,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
+          <Header />
+
         <h1>The movie</h1>
 
           <Link to="/?page=2">Page 2</Link>
