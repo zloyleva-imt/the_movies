@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  nodejs:
+    build:
+      context: .
+      dockerfile: ./docker/nodejs/Dockerfile
+    container_name: "${DOCKER_PREFIX}-nodejs"
+    user: "1000:1000"
+    ports:
+      - 80:3000
+    volumes:
+      - ./app:/var/www
