@@ -4,9 +4,10 @@ import './App.css';
 import MoviesList from './components/MoviesList'
 import Header from './components/Header'
 
-import {Link,withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import asyncFetch from './actions/fetchMoviesAction';
+import SearchMovies from "./components/SearchMovies";
 
 class App extends Component {
   render() {
@@ -15,9 +16,7 @@ class App extends Component {
 
           <Header />
 
-        <h1>The movie</h1>
-
-          <Link to="/?page=2">Page 2</Link>
+          <SearchMovies/>
 
           <MoviesList />
       </div>

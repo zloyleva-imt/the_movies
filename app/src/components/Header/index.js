@@ -33,20 +33,22 @@ export default class Header extends Component {
     render(){
         return (
             <Container fluid={true} className="Header_Component">
-                <Navbar dark expand="md">
-                    <Link to="/" className="navbar-brand">The movie</Link>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
+                <Container>
+                    <Navbar dark expand="md">
+                        <Link to="/" className="navbar-brand">The movie</Link>
+                        <NavbarToggler onClick={this.toggle} />
+                        <Collapse isOpen={this.state.isOpen} navbar>
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <NavLink href="/components/">Components</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                </NavItem>
+                            </Nav>
+                        </Collapse>
+                    </Navbar>
+                </Container>
             </Container>
         )
     }

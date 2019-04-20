@@ -1,0 +1,29 @@
+.Container_Search{
+    border-bottom: 1px solid #aaa;
+}
+
+.Search_Form{
+    position: relative;
+}
+
+.Search_Form .icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.Search_Form .icon svg{
+    color: #aaa;
+}
+
+.Search_Input{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+}
+
+.Search_Input::placeholder{
+    color: #aaa;
+}
