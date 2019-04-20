@@ -14,8 +14,11 @@ show: #Show container
 connect_nodejs: #Connect container
 	@docker-compose exec nodejs /bin/sh
 
-npm_com: #Connect container
+npm_com: #Install dep
 	@docker-compose exec nodejs npm install $(com)
 
-serv: #Connect container
+npm_i: #Npm init/install
+	@docker-compose exec nodejs npm install
+
+serv: #Run dev server
 	@docker-compose exec nodejs npm run start
