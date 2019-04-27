@@ -3,6 +3,7 @@ import './App.css';
 
 import MoviesList from './components/MoviesList'
 import Header from './components/Header'
+import Pagination from './components/Pagination'
 
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
@@ -18,6 +19,8 @@ class App extends Component {
           <SearchMovies/>
 
           <MoviesList />
+
+          <Pagination/>
       </Fragment>
     );
   }
