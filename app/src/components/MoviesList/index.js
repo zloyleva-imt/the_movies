@@ -4,17 +4,17 @@ import {connect} from "react-redux";
 const  MoviesList = ({movies}) => {
     return (
         <div>
-
-            {
-                movies.map((el,i) => (
-                    <div key={i}>{el}</div>
-                ))
-            }
+            <p>Movies list</p>
+            {/*{*/}
+                {/*movies.map((el,i) => (*/}
+                    {/*<div key={i}>{el}</div>*/}
+                {/*))*/}
+            {/*}*/}
 
         </div>
     )
 };
 
 export default connect(
-    state => ({movies:state.movies})
+    state => ({movies:state.moviesData.results})
 )(MoviesList);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 
 import MoviesList from './components/MoviesList'
@@ -12,14 +12,13 @@ import SearchMovies from "./components/SearchMovies";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-
+      <Fragment>
           <Header />
 
           <SearchMovies/>
 
           <MoviesList />
-      </div>
+      </Fragment>
     );
   }
 
