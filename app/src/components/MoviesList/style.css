@@ -1,0 +1,12 @@
+.movie-item .card{
+    overflow: hidden;
+}
+
+.img-movies{
+    padding: 0;
+}
+
+.img-movies-thumbnail{
+    width: 100%;
+    height: auto;
+}
